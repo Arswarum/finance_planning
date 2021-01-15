@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'users',
+    'budget',
 ]
 
 MIDDLEWARE = [
@@ -124,5 +125,5 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = '/budget'
-LOGOUT_REDIRECT_URL = '/login'
+LOGIN_REDIRECT_URL = 'budget'
+LOGOUT_REDIRECT_URL = 'login'

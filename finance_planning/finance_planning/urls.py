@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from users import views
 
+# Maybe have to refactor in the future
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', views.register, name='register'),
-    path('', include('django.contrib.auth.urls'))
+    path('accounts/', include('users.urls')),
+    path('budget/', include('budget.urls')),
 ]
