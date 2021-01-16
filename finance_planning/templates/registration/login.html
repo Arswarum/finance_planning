@@ -1,20 +1,23 @@
-{# {% extends 'some_base.html' %} #}
-
-
-{% block title %}
-    <h1>Login Here</h1>
-{% endblock %}
+{% extends 'registration/base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block content %}
 <!--
 Modifi this form and template later
 -->
-<form method="POST">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <p>Don't have an account? Create one <a href="/register">here.</a></p>
-    <button type="submit">LogIn</button>
+<div class="container">
 
-</form>
+    <div class="login-wrapper center">
+        <h3 class="white-text">Login Here</h3>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <h5 class="white-text">Don't have an account? Create one <a href="/register">here.</a></h5>
+            <button type="submit">LogIn</button>
+
+        </form>
+    </div>
+
+</div>
 {% endblock %}
