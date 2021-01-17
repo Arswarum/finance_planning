@@ -1,4 +1,4 @@
-{% extends 'registration/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -13,7 +13,7 @@ Modifi this form and template later
         <form method="POST">
             {% csrf_token %}
             {{ form|crispy }}
-            <h5 class="white-text">Don't have an account? Create one <a href="/register">here.</a></h5>
+            <h5 class="white-text">Don't have an account? Create one <a href="{% url 'register' %}">here.</a></h5>
             <button type="submit">LogIn</button>
 
         </form>

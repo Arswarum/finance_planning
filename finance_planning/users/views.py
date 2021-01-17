@@ -11,7 +11,7 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('login') # maybe to change (to login page)
+        return redirect('login')
     else:
         form = RegisterForm()
 
