@@ -3,7 +3,7 @@
 /* General */
 html {
     font-family: 'Xanh Mono', monospace;
-    background-color: #E0E0E0;
+    background-color: #11999e;
 }
 h1, h6 {
     font-weight: bold;
@@ -19,7 +19,7 @@ h1, h6 {
 .noproject-wrapper {
     margin-top: 15%;
     padding: 80px 0px;
-    border: 6px dashed #9E9E9E;
+    border: 6px dashed #e4f9f5;
 }
 
 .noproject-wrapper h3 {
@@ -66,4 +66,33 @@ section-stats h1 {
 }
 .section-expenses .close-icon:hover {
     cursor: pointer;
+}
+
+/* Login */
+.login-wrapper {
+    margin-top: 15%;
+    padding: 40px 0px;
+    border: 6px dashed #e4f9f5;
+}
+
+.login-wrapper h3 {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.link-color {
+    color: #40514e;
+    background-color: transparent;
+}
+
+/* Register */
+.register-wrapper {
+    margin-top: 15%;
+    margin-bottom: 15%;
+    padding: 40px 0px;
+    border: 6px dashed #e4f9f5;
+}
+
+.register-wrapper h3 {
+    padding: 10px;
+    margin-bottom: 20px;
 }

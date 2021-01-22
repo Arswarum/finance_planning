@@ -5,9 +5,13 @@ from django.views.generic import CreateView
 from django.utils.text import slugify
 from .forms import ExpenseForm
 import json
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
+
+@login_required(login_url='login')
 def project_list(request):
     project_list = Project.objects.all()
     return render(request, 'budget/project-list.html', {
@@ -15,6 +19,7 @@ def project_list(request):
     })
 
 
+@login_required(login_url='login')
 def project_detail(request, project_slug):
     project = get_object_or_404(Project, slug=project_slug)
     expense_list = project.expenses.all()
@@ -52,7 +57,8 @@ def project_detail(request, project_slug):
     return HttpResponseRedirect(project_slug)
 
 
-class ProjectCreateView(CreateView):
+class ProjectCreateView(LoginRequiredMixin, CreateView):
+    login_url = 'login'
     model = Project
     template_name = 'budget/add-project.html'
     fields = ('name', 'budget')
