@@ -15,12 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from users import views
-
-# Maybe have to refactor in the future
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('users.urls')),
-    path('', include('budget.urls'), name='budget'),
+    path('', include('budget.urls')),
+    path('accounts/', include('users.urls'))
 ]

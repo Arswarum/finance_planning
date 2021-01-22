@@ -1,7 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
-from users.forms import RegisterForm
+from .forms import RegisterForm
 
 # Create your views here.
 
@@ -15,4 +13,4 @@ def register(request):
     else:
         form = RegisterForm()
 
-    return render(request, 'users/register.html', {'form': form})
+    return render(request, 'registration/register.html', {'form': form})

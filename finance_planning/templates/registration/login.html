@@ -6,6 +6,7 @@
 <!--
 Modifi this form and template later
 -->
+
 <div class="container">
 
     <div class="login-wrapper center">
@@ -13,8 +14,8 @@ Modifi this form and template later
         <form method="POST">
             {% csrf_token %}
             {{ form|crispy }}
-            <h5 class="white-text">Don't have an account? Create one <a href="{% url 'register' %}">here.</a></h5>
-            <button type="submit">LogIn</button>
+            <h5 class="white-text">Don't have an account? Create one <a class="link-color" href="{% url 'register' %}">here.</a></h5>
+            <button type="submit" class="btn btn-success">LogIn</button>
 
         </form>
     </div>
