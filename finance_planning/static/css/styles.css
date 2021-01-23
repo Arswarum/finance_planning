@@ -3,7 +3,7 @@
 /* General */
 html {
     font-family: 'Xanh Mono', monospace;
-    background-color: #11999e;
+    background-color: #3282b8;
 }
 h1, h6 {
     font-weight: bold;
@@ -95,4 +95,9 @@ section-stats h1 {
 .register-wrapper h3 {
     padding: 10px;
     margin-bottom: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #40514e;
 }
