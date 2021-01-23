@@ -13,7 +13,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 @login_required(login_url='login')
 def project_list(request):
-    project_list = Project.objects.all()
+    project_list = Project.objects.filter(user=request.user)
     return render(request, 'budget/project-list.html', {
         'project_list': project_list,
     })
@@ -63,9 +63,12 @@ class ProjectCreateView(LoginRequiredMixin, CreateView):
     template_name = 'budget/add-project.html'
     fields = ('name', 'budget')
 
+
     def form_valid(self, form):
-        self.object = form.save(commit=False)  # objects
-        self.object.save()  # objects
+        user = self.request.user
+        self.object = form.save(commit=False)
+        self.object.user = user
+        self.object.save()
 
         categories = self.request.POST['categoriesString'].split(',')
         for category in categories:
