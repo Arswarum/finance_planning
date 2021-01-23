@@ -1,4 +1,5 @@
 {% extends 'budget/base.html' %}
+{% load i18n %}
 {% block content %}
 
 <div class="container">
@@ -8,14 +9,14 @@
 
             <div class="col s12 m12 14">
                 <div class="card-panel">
-                    <h6 class="bold">Total Budget</h6>
+                    <h6 class="bold">{% trans "Total Budget" %}</h6>
                     <h1 class="bold">$ {{ project.budget }}</h1>
                 </div>
             </div>
 
             <div class="col s12 m6 14">
                 <div class="card-panel">
-                    <h6 class="bold">Budget Left</h6>
+                    <h6 class="bold">{% trans "Budget Left" %}</h6>
                     {% if project.budget_left > 0 %}
                         <h1 class="bold green-text">${{ project.budget_left }}</h1>
                     {% elif project.budget_left == 0 %}
@@ -28,7 +29,7 @@
 
             <div class="col s12 m6 14">
                 <div class="card-panel">
-                    <h6 class="bold">Total Transactions</h6>
+                    <h6 class="bold">{% trans "Total Transactions" %}</h6>
                     <h1 class="bold">{{ project.total_transactions }}</h1>
                 </div>
             </div>
@@ -41,7 +42,7 @@
         <div class="row">
             <button class="btn waves-effect right modal-trigger" href="#expenseModal">
                 <i class="material-icons white-text left">add_circle</i>
-                Add Expence
+                {% trans "Add Expence" %}
             </button>
         </div>
 
@@ -82,25 +83,25 @@
 
 <div id="expenseModal" class="modal">
     <div class="modal-content">
-        <h4>Add Expense</h4>
+        <h4>{% trans "Add Expense" %}</h4>
 
         <form method="POST">
             {% csrf_token %}
             {{ form }}
-            <label for="title">Title</label>
+            <label for="title">{% trans "Title" %}</label>
             <input name="title" id="title">
 
-            <label for="amount">Amount</label>
+            <label for="amount">{% trans "Amount" %}</label>
             <input name="amount" id="amount">
 
-            <label for="category">Category</label>
+            <label for="category">{% trans "Category" %}</label>
             <select name="category">
                 {% for category in category_list %}
                     <option>{{ category.name }}</option>
                 {% endfor %}
             </select>
 
-            <button type="submit" class="btn">Add</button>
+            <button type="submit" class="btn">{% trans "Add" %}</button>
         </form>
 
     </div>

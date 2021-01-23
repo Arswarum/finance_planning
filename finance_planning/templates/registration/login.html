@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -10,15 +11,17 @@ Modifi this form and template later
 <div class="container">
 
     <div class="login-wrapper center">
-        <h3 class="white-text">Login Here</h3>
+        <h3 class="white-text">{% trans "Login Here" %}</h3>
         <form method="POST">
             {% csrf_token %}
             {{ form|crispy }}
-            <h5 class="white-text">Don't have an account? Create one <a class="link-color" href="{% url 'register' %}">here.</a></h5>
-            <button type="submit" class="btn btn-success">LogIn</button>
+            <h5 class="white-text">{% trans "Don't have an account? Create one " %}<a class="link-color" href="{% url 'register' %}">{% trans "here." %}</a></h5>
+            <button type="submit" class="btn btn-success">{% trans "Login" %}</button>
 
         </form>
     </div>
 
 </div>
+
+
 {% endblock %}

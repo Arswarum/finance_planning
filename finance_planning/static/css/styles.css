@@ -101,3 +101,39 @@ section-stats h1 {
 .navbar {
     background-color: #40514e;
 }
+
+/* Language switch */
+
+.language-btn{
+    background-color: #c9f0dd;
+    border: 1px solid #c9f0dd;
+    border-radius: 2px;
+    color: #0C4B33;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.navbar-right{
+    margin-right: 20px;
+}
+
+.dropdown-menu{
+    min-width: inherit;
+}
+
+.fake-btn{
+    background-color: transparent;
+    border: none;
+    color: rgb(150,150,150);
+    height: 12px;
+    font-size: 11px;
+}
+
+.no-margins{
+    margin: 0;
+    padding: 0;
+}
+
+.selected{
+    color: #0C4B33;
+}

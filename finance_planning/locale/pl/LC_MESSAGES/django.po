@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-23 19:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: templates/budget/add-project.html:10
+msgid "Expense Categories (hit enter after every category)"
+msgstr "Kategorie wydatków (naciśnij Enter po każdej kategorii)"
+
+#: templates/budget/add-project.html:18
+#, fuzzy
+#| msgid "Add Project"
+msgid "Start Project"
+msgstr "Dodaj projekt"
+
+#: templates/budget/project-detail.html:12
+msgid "Total Budget"
+msgstr "Cały budżet"
+
+#: templates/budget/project-detail.html:19
+#, fuzzy
+#| msgid "Budget Projects"
+msgid "Budget Left"
+msgstr "Pozostały budżet"
+
+#: templates/budget/project-detail.html:32
+msgid "Total Transactions"
+msgstr "Całkowita liczba transakcji"
+
+#: templates/budget/project-detail.html:45
+msgid "Add Expence"
+msgstr "Dodaj wydatek"
+
+#: templates/budget/project-detail.html:86
+msgid "Add Expense"
+msgstr "Dodaj wydatek"
+
+#: templates/budget/project-detail.html:91
+msgid "Title"
+msgstr "Tytuł"
+
+#: templates/budget/project-detail.html:94
+msgid "Amount"
+msgstr "Kwota"
+
+#: templates/budget/project-detail.html:97
+msgid "Category"
+msgstr "Kategoria"
+
+#: templates/budget/project-detail.html:104
+msgid "Add"
+msgstr "Dodaj"
+
+#: templates/budget/project-list.html:7
+#, fuzzy
+#| msgid "Add Project"
+msgid "My Projects"
+msgstr "Moje projekty"
+
+#: templates/budget/project-list.html:15
+msgid "Visit"
+msgstr "Odwiedz"
+
+#: templates/budget/project-list.html:20
+msgid "Sorry, you don't have any projects, yet."
+msgstr "Przepraszamy, nie masz jeszcze żadnych projektów."
+
+#: templates/budget/project-list.html:23 templates/budget/project-list.html:29
+msgid "Add Project"
+msgstr "Dodaj projekt"
+
+#: templates/navbar.html:4
+msgid "Finance Planning"
+msgstr "Planowanie Finansów"
+
+#: templates/navbar.html:27
+msgid "Budget Projects"
+msgstr "Projekty budżetowe"
+
+#: templates/navbar.html:28
+msgid "Logout"
+msgstr "Wyloguj"
+
+#: templates/registration/login.html:14
+msgid "Login Here"
+msgstr "Zaloguj się tutaj"
+
+#: templates/registration/login.html:18
+msgid "Don't have an account? Create one "
+msgstr "Nie masz konta? Utwórz je "
+
+#: templates/registration/login.html:18
+msgid "here."
+msgstr "tutaj."
+
+#: templates/registration/login.html:19
+#, fuzzy
+#| msgid "Login Here"
+msgid "Login"
+msgstr "Zaloguj się"
+
+#: templates/registration/register.html:15
+msgid "Create an Account"
+msgstr "Utwórz konto"
+
+#: templates/registration/register.html:19
+msgid "Register"
+msgstr "Zarejestruj się"
